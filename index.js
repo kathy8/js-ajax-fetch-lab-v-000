@@ -31,7 +31,8 @@ function createIssue() {
 
 
 function showResults(json) {
-   document.getElementById('results').innerHTML = `<a href=${json.html_url}>Link to Repo</a>`;
+   document.getElementById('results').innerHTML = `<a
+   href=${json.html_url}>Link to Repo</a>`;
 }
 
 function forkRepo() {
