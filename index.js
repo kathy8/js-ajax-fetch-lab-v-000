@@ -8,7 +8,6 @@ function getIssues() {
   }).then(res => res.json()).then(json => showIssues(json))
 	 }
 
-
 function showIssues(json) {
   const issues = json.map(issue => {
     return (`<h3>${issue.title}</h3>
