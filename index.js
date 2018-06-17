@@ -16,7 +16,8 @@ function showIssues(json) {
   document.getElementById('issues').innerHTML = issues.join(' ');
 }
 
-function createIssue() {const title = document.getElementById('title').value;
+function createIssue() {
+  const title = document.getElementById('title').value;
   const body = document.getElementById('body').value;
   const postData = { title: title, body: body }
   fetch(`${baseURL}/repos/jennianelson/javascript-fetch-lab/issues`, {
@@ -27,7 +28,7 @@ function createIssue() {const title = document.getElementById('title').value;
     }
   }).then(res => getIssues(res))
 	 }
-}
+
 
 function showResults(json) {
    document.getElementById('results').innerHTML = `<a href=${json.html_url}>Link to Repo</a>`;
