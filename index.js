@@ -7,7 +7,7 @@ function getIssues() {
     }
   }).then(res => res.json()).then(json => showIssues(json))
 	 }
-}
+
 
 function showIssues(json) {
   const issues = json.map(issue => {
@@ -43,7 +43,7 @@ function forkRepo() {
       Authorization: `token ${getToken()}`
     }
   }).then(res => res.json()).then(res => showResults(res))
- }	 
+ }
 
 
 function getToken() {
